@@ -43,3 +43,21 @@ def is_prime(n):
 
     return (num_of_divisors == 2)# This will only return True if the number of divisors is 2,
                                  # where the 2 are only 1 and n. 
+    
+    
+def binary_to_decimal(b: str):
+    """
+    This program returns the decimal representation of any given binary number
+    Number must be inputed between quotes...
+
+    NEED TO ADD MORE CODE TO MAKE IT ACCEPT AND FIND THE NEGATIVE VALUES AS WELL (add new parameters as 
+    comparison to whether or not it is a negative or a number representation )
+    """
+    # new_b = str(b)
+    # print(b)
+    decimal_num = 0
+    new_b = b[::-1]  #THIS IS TO REVERSE THE BINARY NUMBER
+    for i in range(len(new_b)):
+        if new_b[i] == '1':
+            decimal_num += 2**i
+    return decimal_num
